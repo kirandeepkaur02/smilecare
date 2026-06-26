@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --shadow-glass: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+@utility glass-card {
+  background: color-mix(in oklab, white 70%, transparent);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid color-mix(in oklab, white 80%, transparent);
+  box-shadow: var(--shadow-glass);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
