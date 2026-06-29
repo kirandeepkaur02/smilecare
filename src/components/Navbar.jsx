@@ -34,7 +34,7 @@ const Navbar = () => {
     transition-all
     duration-300
     ease-in-out
-    hover:bg-emerald-700
+    hover:bg-cyan-700
     hover:-translate-y-0.5
     hover:shadow-2xl inline-flex items-center gap-2 text-sm font-semibold">
               Book <ArrowRight className="h-4 w-4" />

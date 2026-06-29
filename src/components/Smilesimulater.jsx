@@ -47,7 +47,7 @@ const Smilesimulater = () => {
               </div>
               <p className="mt-5 font-display text-xl font-semibold">Drop a selfie or click to upload</p>
               <p className="mt-2 text-sm text-muted-foreground">JPG or PNG · processed privately, on-device</p>
-               <button className="bg-blue-400  text-amber-50 hover:bg-emerald-700 mt-6 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold">
+               <button className="bg-blue-400  text-amber-50 hover:bg-cyan-700 mt-6 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold">
                 <Sparkles className="h-4 w-4" /> Generate preview
               </button>
             </div>

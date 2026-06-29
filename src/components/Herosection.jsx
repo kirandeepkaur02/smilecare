@@ -31,9 +31,9 @@ const Herosection = () => {
                         <span className="flex h-2 w-2 rounded-full bg-secondary animate-pulse-ring" />
                         Now accepting new patients · Same-day appointments
                     </div>
-                    <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.02] tracking-tight">
+                    <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.02] tracking-tight">
                         Healthy smiles <br />
-                        crafted with <span className="text-[#21bec6]">precision.</span>
+                        crafted with <span className="text-blue-400">precision.</span>
                     </h1>
                     <p className="mt-6 max-w-xl text-lg sm:text-xl text-gray-400 leading-relaxed">
                         Advanced dentistry, pain-free treatments and personalized care for every patient — delivered in a space designed for calm.
@@ -48,7 +48,7 @@ const Herosection = () => {
     transition-all
     duration-300
     ease-in-out
-    hover:bg-emerald-700
+    hover:bg-cyan-700
     hover:-translate-y-0.5
     hover:shadow-2xl inline-flex items-center gap-2 text-sm font-semibold">
                             <Calendar className="h-4 w-4" /> Book Appointment
