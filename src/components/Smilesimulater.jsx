@@ -17,7 +17,7 @@ const Smilesimulater = () => {
 
     return (
       <div className={`max-w-2xl ${alignment}`}>
-        <p className="text-sm font-semibold uppercase tracking-wider text-blue-300">
+        <p className="text-sm font-semibold uppercase tracking-wider text-blue-500">
           {eyebrow}
         </p>
 
@@ -63,7 +63,7 @@ const Smilesimulater = () => {
               <div key={f.t} className="rounded-2xl bg-white border border-gray-300    transition-all duration-300 ease-in-out
              hover:-translate-y-2 hover:shadow-xl p-5">
                 <div className="flex items-center gap-3">
-                  <div className="grid h-10 w-10 place-items-center rounded-xl bg-cyan-100 text-cyan-500">
+                  <div className="grid h-10 w-10 place-items-center rounded-xl bg-cyan-300/15 text-cyan-500">
                     <Sparkles className="h-5 w-5" />
                   </div>
                   <div>

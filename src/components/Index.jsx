@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Herosection from './Herosection'
 import Smilesimulater from './Smilesimulater'
+import HealthScore from './HealthScore'
 
 const index = () => {
   return (
@@ -9,6 +10,7 @@ const index = () => {
         <Navbar />
         <Herosection />
         <Smilesimulater />
+        <HealthScore />
     </div>
   )
 }
