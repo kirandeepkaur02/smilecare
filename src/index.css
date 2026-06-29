@@ -13,9 +13,14 @@
 
 
 
+@utility glass-card {
+  background: color-mix(in oklab, white 70%, transparent);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid color-mix(in oklab, white 80%, transparent);
+  box-shadow: var(--shadow-glass);
+}
 
-
-
+@utility animate-float-slow { animation: float-slow 12s ease-in-out infinite; }
 
 
 
