@@ -31,7 +31,7 @@ const Herosection = () => {
                         <span className="flex h-2 w-2 rounded-full bg-secondary animate-pulse-ring" />
                         Now accepting new patients · Same-day appointments
                     </div>
-                    <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.02] tracking-tight">
+                    <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight">
                         Healthy smiles <br />
                         crafted with <span className="text-blue-400">precision.</span>
                     </h1>

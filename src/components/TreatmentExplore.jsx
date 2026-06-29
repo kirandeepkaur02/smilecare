@@ -4,7 +4,7 @@ const TreatmentExplorer = ( ) => {
   const upperTeeth = Array.from({ length: 16 }, (_, i) => i + 1);
   const lowerTeeth = Array.from({ length: 16 }, (_, i) => i + 17);
 
-function SectionHeader({ eyebrow, title, subtitle }) {
+const SectionHeader =({ eyebrow, title, subtitle }) => {
   return (
     <div className="max-w-3xl mx-auto text-center">
       {eyebrow && (

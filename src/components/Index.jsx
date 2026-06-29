@@ -9,7 +9,7 @@ import Costestimater from './Costestimater'
 import Smilesstories from './Smilesstories'
 import Virtualtour  from './Virtualtour'
 import Doctors from "./Doctors"
-
+import Testimonial from './Testimonial'
 
 const index = () => {
   return (
@@ -24,6 +24,7 @@ const index = () => {
         <Smilesstories />
         <Virtualtour />
         <Doctors />
+        <Testimonial />
     </div>
   )
 }

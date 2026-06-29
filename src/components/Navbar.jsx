@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Sparkles, Phone, ArrowRight, Menu
 } from "lucide-react";
+import Weblogo from "../assets/Logo.png"
 
 const Navbar = () => {
   return (
@@ -9,8 +10,10 @@ const Navbar = () => {
       <div className="mx-auto mt-4 max-w-7xl px-4 ">
         <div className='glass-card flex items-center justify-between rounded-2xl px-5 py-3'>
           <a href="#" className="flex items-center gap-2">
-            <div className="grid h-9 w-9 place-items-center rounded-xl bg-linear-to-br from-[#4F8DFF] to-[#3CBCC3] text-white">
-              <Sparkles className="h-5 w-5" />
+            <div className="grid h-9 w-9 place-items-center rounded-xl  ">
+              {/* <Sparkles className="h-5 w-5" /> */}
+
+              <img src={Weblogo} alt="logo" className='h-10 w-10 bg-none' />
             </div>
             <span className="font-display text-lg font-semibold tracking-tight">SmileCare</span>
           </a>
