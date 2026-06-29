@@ -6,6 +6,10 @@ import HealthScore from './HealthScore'
 import Service from './Service'
 import TreatmentExplore from './TreatmentExplore'
 import Costestimater from './Costestimater'
+import Smilesstories from './Smilesstories'
+import Virtualtour  from './Virtualtour'
+import Doctors from "./Doctors"
+
 
 const index = () => {
   return (
@@ -17,6 +21,9 @@ const index = () => {
         <TreatmentExplore />
         <Service />
         <Costestimater />
+        <Smilesstories />
+        <Virtualtour />
+        <Doctors />
     </div>
   )
 }
