@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function TreatmentExplorer() {
+const TreatmentExplorer = ( ) => {
   const upperTeeth = Array.from({ length: 16 }, (_, i) => i + 1);
   const lowerTeeth = Array.from({ length: 16 }, (_, i) => i + 17);
 
