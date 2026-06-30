@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, Mail, MessageCircle, Phone } from "lucide-react";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Bookappointment = () => {
 
@@ -37,8 +38,7 @@ const Bookappointment = () => {
          console.log(result);
 
           if (result.success) {
-      alert("Appointment booked successfully!");
-
+     toast.success("Appointment booked successfully!");
       setFormData({
         full_name: "",
         phone: "",
