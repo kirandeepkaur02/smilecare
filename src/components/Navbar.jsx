@@ -10,10 +10,10 @@ const Navbar = () => {
       <div className="mx-auto mt-4 max-w-7xl px-4 ">
         <div className='glass-card flex items-center justify-between rounded-2xl px-5 py-3'>
           <a href="#" className="flex items-center gap-2">
-            <div className="grid h-9 w-9 place-items-center rounded-xl  ">
-              {/* <Sparkles className="h-5 w-5" /> */}
+            <div className="grid h-9 w-9 place-items-center rounded-xl bg-blue-400 ">
+              <Sparkles className="h-5 w-5 text-white" />
 
-              <img src={Weblogo} alt="logo" className='h-10 w-10 bg-none' />
+              {/* <img src={Weblogo} alt="logo" className='h-10 w-10 bg-none' /> */}
             </div>
             <span className="font-display text-lg font-semibold tracking-tight">SmileCare</span>
           </a>

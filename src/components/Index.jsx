@@ -13,6 +13,8 @@ import Testimonial from './Testimonial'
 import Kidszone from './Kidszone'
 import Bookappointment from './Bookappointment'
 import Blogs from './Blogs'
+import Footer from './Footer'
+
 
 const index = () => {
   return (
@@ -31,6 +33,7 @@ const index = () => {
         <Kidszone />
         <Bookappointment />
         <Blogs />
+        <Footer />
     </div>
   )
 }

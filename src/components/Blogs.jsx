@@ -50,8 +50,7 @@ const Blogs = () => {
             </article>
           ))}
           </div>
-      
-       </div>
+             </div>
     </div>
   )
 }
