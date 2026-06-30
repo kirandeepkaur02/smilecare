@@ -1,8 +1,62 @@
 import React from "react";
 import { ArrowRight, Mail, MessageCircle, Phone } from "lucide-react";
-
+import { useState } from "react";
 
 const Bookappointment = () => {
+
+   const[formData,setFormData]=useState({
+        full_name: "",
+  phone: "",
+  email: "",
+  doctor: "",
+  date: "",
+  time: "",
+  message: ""
+   })
+
+   const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+     const handleSubmit= async (e)=>{
+      e.preventDefault();
+      console.log(formData)
+      try{
+         const response = await fetch (
+          "http://localhost/smilecare/booking.php",
+          { method :"POST",
+            headers:{ "Content-Type":"application/json",},
+            body: JSON.stringify(formData),
+          }
+         )
+         const result = await response.json()
+
+         console.log(result);
+
+          if (result.success) {
+      alert("Appointment booked successfully!");
+
+      setFormData({
+        full_name: "",
+        phone: "",
+        email: "",
+        doctor: "",
+        date: "",
+        time: "",
+        message: "",
+      });
+    } else {
+      alert(result.message);
+    }
+
+      }catch (error){
+           console.log(error);
+      }
+     }
+
 
  const SectionHeader = ({ eyebrow, title, subtitle }) => {
     return (
@@ -25,8 +79,6 @@ const Bookappointment = () => {
       </div>
     );
   }
-
-
   return (
     <section id="book" className="py-24 bg-blue-400/10">
       <div className="mx-auto max-w-5xl px-4">
@@ -35,20 +87,43 @@ const Bookappointment = () => {
           title="Reserve your visit in under a minute."
         />
 
-        <form className="mt-12 rounded-4xl bg-white border border-gray-200 p-8 lg:p-10 shadow-(--shadow-soft) grid sm:grid-cols-2 gap-5">
-          <Field label="Full name" placeholder="Jane Doe" className= "border  border-gray-200" />
-          <Field label="Phone" placeholder="(555) 010-2026" />
+        <form 
+                onSubmit={handleSubmit}
+        className="mt-12 rounded-4xl bg-white border border-gray-200 p-8 lg:p-10 shadow-(--shadow-soft) grid sm:grid-cols-2 gap-5">
+          <Field 
+            name="full_name"
+  value={formData.full_name}
+  onChange={handleChange}
+          label="Full name" placeholder="Jane Doe" className= "border  border-gray-200" />
+          <Field 
+            name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+          label="Phone" placeholder="(555) 010-2026" />
           <Field
+             name="email"
+  value={formData.email}
+  onChange={handleChange}
             label="Email"
             placeholder="you@email.com"
             type="email"
           />
           <Field
+             name="doctor"
+  value={formData.doctor}
+  onChange={handleChange}
             label="Preferred doctor"
             placeholder="Any specialist"
           />
-          <Field label="Date" type="date" />
+          <Field 
+                name="date"
+  value={formData.date}
+  onChange={handleChange}
+          label="Date" type="date" />
           <Field
+                      name="time"
+  value={formData.time}
+  onChange={handleChange}
             label="Time slot"
             placeholder="Morning · Afternoon · Evening"
           />
@@ -60,6 +135,9 @@ const Bookappointment = () => {
 
             <textarea
               rows={4}
+               name="message"
+  value={formData.message}
+  onChange={handleChange}
               placeholder="Tell us about your concern…"
               className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-sm focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-400/10 transition"
             />
@@ -97,7 +175,7 @@ const Bookappointment = () => {
   );
 };
 
-const Field = ({ label, placeholder, type = "text" }) => {
+const Field = ({ label, placeholder, type = "text", name,value,onChange }) => {
   return (
     <div>
       <label className="block text-sm font-medium mb-2">
@@ -106,11 +184,13 @@ const Field = ({ label, placeholder, type = "text" }) => {
 
       <input
         type={type}
+         name={name}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         className="w-full rounded-2xl border border-gray-400 bg-white px-4 py-3 text-sm focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-400/10 transition"
       />
     </div>
   );
 };
-
 export default Bookappointment;
