@@ -12,6 +12,7 @@ import Doctors from "./Doctors"
 import Testimonial from './Testimonial'
 import Kidszone from './Kidszone'
 import Bookappointment from './Bookappointment'
+import Blogs from './Blogs'
 
 const index = () => {
   return (
@@ -29,6 +30,7 @@ const index = () => {
         <Testimonial />
         <Kidszone />
         <Bookappointment />
+        <Blogs />
     </div>
   )
 }
