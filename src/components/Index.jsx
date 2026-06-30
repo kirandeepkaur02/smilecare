@@ -10,6 +10,8 @@ import Smilesstories from './Smilesstories'
 import Virtualtour  from './Virtualtour'
 import Doctors from "./Doctors"
 import Testimonial from './Testimonial'
+import Kidszone from './Kidszone'
+import Bookappointment from './Bookappointment'
 
 const index = () => {
   return (
@@ -25,6 +27,8 @@ const index = () => {
         <Virtualtour />
         <Doctors />
         <Testimonial />
+        <Kidszone />
+        <Bookappointment />
     </div>
   )
 }
